@@ -1,1 +1,1 @@
-CREATE SCHEMA IF NOT EXISTS sparta_academy;
+CREATE SCHEMA IF NOT EXISTS film_school;

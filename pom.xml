@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sparta</groupId>
-    <artifactId>sparta-api</artifactId>
+    <artifactId>film-school</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sparta-api</name>
     <description>sparta-api</description>

@@ -1,4 +1,4 @@
-package com.sparta.spartaapi.entities;
+package com.farah.filmschool.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "trainers", schema = "sparta_academy", indexes = {
+@Table(name = "trainers", schema = "film_school", indexes = {
         @Index(name = "id", columnList = "full_name")
 })
 public class Trainer {

@@ -1,7 +1,7 @@
-package com.sparta.spartaapi.dtos;
+package com.farah.filmschool.dtos;
 
-import com.sparta.spartaapi.entities.Course;
-import com.sparta.spartaapi.entities.Trainer;
+import com.farah.filmschool.entities.Course;
+import com.farah.filmschool.entities.Trainer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

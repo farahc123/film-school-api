@@ -1,6 +1,6 @@
-package com.sparta.spartaapi.repositories;
+package com.farah.filmschool.repositories;
 
-import com.sparta.spartaapi.entities.Trainer;
+import com.farah.filmschool.entities.Trainer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

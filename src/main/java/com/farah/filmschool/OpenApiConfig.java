@@ -1,4 +1,4 @@
-package com.sparta.spartaapi;
+package com.farah.filmschool;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,8 +12,8 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Sparta Academy API")
+                        .title("Film School API")
                         .version("1.0")
-                        .description("API documentation for Farah's Sparta Academy application"));
+                        .description("API documentation for Farah's Film School application"));
     }
 }

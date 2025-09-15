@@ -1,10 +1,10 @@
-package com.sparta.spartaapi;
+package com.farah.filmschool;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpartaApiApplicationTests {
+class FilmSchoolApiApplicationTests {
 
     @Test
     void contextLoads() {

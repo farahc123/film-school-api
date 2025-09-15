@@ -1,8 +1,9 @@
-package com.sparta.spartaapi.controllers;
+package com.farah.filmschool.controllers;
 
-import com.sparta.spartaapi.dtos.GetTrainerDto;
-import com.sparta.spartaapi.dtos.PostTrainerDto;
-import com.sparta.spartaapi.services.TrainerService;
+import com.farah.filmschool.dtos.GetTrainerDto;
+import com.farah.filmschool.dtos.PostTrainerDto;
+import com.farah.filmschool.dtos.UpdateTrainerDto;
+import com.farah.filmschool.services.TrainerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
@@ -48,6 +49,20 @@ class TrainerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 trainerService.createTrainer(postTrainerDto)
         );
+    }
+
+    @Operation(summary = "Update a trainer's name and their course(s) (optional)", description = "Update fullName and list of course IDs")
+    @PutMapping("/{id}")
+    ResponseEntity<GetTrainerDto> updateTrainer(
+            @PathVariable Integer id,
+            @RequestBody UpdateTrainerDto updateTrainerDto
+    ) {
+        try {
+            GetTrainerDto updatedTrainer = trainerService.updateTrainer(id, updateTrainerDto);
+            return ResponseEntity.ok(updatedTrainer);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

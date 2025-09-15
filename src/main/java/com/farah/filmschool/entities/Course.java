@@ -1,4 +1,4 @@
-package com.sparta.spartaapi.entities;
+package com.farah.filmschool.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "courses", schema = "sparta_academy", indexes = {
+@Table(name = "courses", schema = "film_school", indexes = {
         @Index(name = "id", columnList = "id"),
         @Index(name = "title", columnList = "title"),
         @Index(name = "enroll_date", columnList = "enroll_date"),
