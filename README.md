@@ -1,1 +1,1 @@
-test2 # academy-api
+test # academy-api
