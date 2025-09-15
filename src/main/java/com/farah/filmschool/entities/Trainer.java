@@ -9,12 +9,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "trainers", schema = "film_school", indexes = {
-        @Index(name = "id", columnList = "full_name")
+        @Index(name = "idx_full_name", columnList = "full_name")
 })
 public class Trainer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "trainer_id", nullable = false)
+    @Column(name = "id", nullable = false)
     private Integer id;
 
     @Size(max = 100)

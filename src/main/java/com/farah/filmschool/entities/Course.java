@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "courses", schema = "film_school", indexes = {
         @Index(name = "id", columnList = "id"),
-        @Index(name = "title", columnList = "title"),
-        @Index(name = "enroll_date", columnList = "enroll_date"),
-        @Index(name = "trainer", columnList = "trainer_id")
+        @Index(name = "idx_title", columnList = "title"),
+        @Index(name = "idx_enroll_date", columnList = "enroll_date"),
+        @Index(name = "idx_trainer_id", columnList = "trainer_id")
 })
 public class Course {
     @Id
