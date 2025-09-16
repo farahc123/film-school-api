@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: film_school
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: <insert password here>
     ports:
       - "5432:5432"
     volumes:
@@ -27,7 +27,7 @@ services:
       SPRING_PROFILES_ACTIVE: docker
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/film_school
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DATASOURCE_PASSWORD: <insert password here>
     depends_on:
       - postgres
     networks:
