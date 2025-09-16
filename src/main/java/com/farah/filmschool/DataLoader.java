@@ -27,15 +27,15 @@ public class DataLoader {
                 Trainer trainer2 = new Trainer("Thelma Schoonmaker");
                 Trainer trainer3 = new Trainer("Ruth Prawer Jhabvala");
 
-                // save trainers
+                // saves trainers
                 trainerRepository.save(trainer1);
                 trainerRepository.save(trainer2);
                 trainerRepository.save(trainer3);
 
-                // flush to ensure IDs are generated before assigning them to courses
+                // flushes to ensure IDs are generated before assigning them to courses
                 trainerRepository.flush();
 
-                // create courses linked to trainers
+                // creates courses linked to trainers
                 Course course1 = new Course(
                         "Directing",
                         "Learn how to be a director from one of the best",
@@ -57,7 +57,7 @@ public class DataLoader {
                         trainer3
                 );
 
-                // Save courses
+                // saves courses
                 courseRepository.save(course1);
                 courseRepository.save(course2);
                 courseRepository.save(course3);

@@ -20,8 +20,10 @@ Welcome to Farah's Film School REST API project! This is a Java Spring Boot appl
 ## Database
 
 The database contains a trainers and a courses table, which are linked and preloaded with some data.
-- Trainers table: ![trainers table](image-2.png)
-- Course table: ![courses table](image-3.png)
+- Trainers table:
+![trainers table](image-2.png)
+- Course table:
+![courses table](image-3.png)
 
 ## Interacting with the API
 

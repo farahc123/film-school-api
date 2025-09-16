@@ -10,5 +10,5 @@ public record GetCourseDto(
         String title,
         String description,
         LocalDate enrollDate,
-        @Schema(name = "author") GetCourseTrainerDto trainer) {
+        @Schema(name = "trainer") GetCourseTrainerDto trainer) {
 }

@@ -1,5 +1,3 @@
--- src/main/resources/init-schema.sql
-
 CREATE SCHEMA IF NOT EXISTS film_school;
 
 CREATE TABLE IF NOT EXISTS film_school.trainers (

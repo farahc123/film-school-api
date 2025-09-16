@@ -56,7 +56,7 @@ class CourseServiceTest {
                 trainerDto
         );
 
-        // mock repository and mapper behavior
+        // mocks repository and mapper behavior
         when(courseRepository.findById(1)).thenReturn(Optional.of(course));
         when(courseMapper.toDto(course)).thenReturn(dto);
 
@@ -92,19 +92,19 @@ class CourseServiceTest {
                 1
         );
 
-        // mocked trainer entity
+        // mocks trainer entity
         Trainer trainer = new Trainer();
         trainer.setId(1);
         trainer.setFullName("Trainer Name");
 
-        // mocked course entity
+        // mocks course entity
         Course course = new Course();
         course.setTitle("Title");
         course.setDescription("Desc");
         course.setEnrollDate(postDto.enrollDate());
         course.setTrainer(trainer);
 
-        // Trainer DTO for GetCourseDto
+        // CourseTrainer DTO for GetCourseDto
         GetCourseTrainerDto trainerDto = new GetCourseTrainerDto(1, "Trainer Name");
 
         // expected course DTO returned by mapper
@@ -134,8 +134,6 @@ class CourseServiceTest {
         verify(courseRepository).save(course);
     }
 
-
-    // Edge case: updating non-existent course
     @Test
     void updateCourse_nonExistent_throwsException() {
         when(courseRepository.findById(99)).thenReturn(Optional.empty());
