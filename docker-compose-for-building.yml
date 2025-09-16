@@ -1,7 +1,4 @@
-# this version is for use on VMs
-
-version: "3.9"
-
+# only needed if building the app from the source code
 services:
   postgres:
     image: postgres:15
@@ -9,7 +6,7 @@ services:
     environment:
       POSTGRES_DB: film_school
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: <insert password here>
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -19,7 +16,9 @@ services:
       - app-network
 
   app:
-    image: farahc123/film-school-postgresql-api:latest   # 👈 use the prebuilt image
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: film_school_app
     ports:
       - "8091:8091"
@@ -27,7 +26,7 @@ services:
       SPRING_PROFILES_ACTIVE: docker
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/film_school
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: <insert password here>
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
     depends_on:
       - postgres
     networks:

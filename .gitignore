@@ -1,3 +1,12 @@
+# Env vars
+*.env
+
+# Logs from local testing
+*.log
+
+# Docker
+Dockerfile
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
