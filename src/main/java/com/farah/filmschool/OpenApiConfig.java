@@ -13,7 +13,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("Film School API")
-                        .version("1.0")
+                        .version("2.0")
                         .description("API documentation for Farah's Film School application"));
     }
 }
